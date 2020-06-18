@@ -29,4 +29,4 @@ Linux :   open a terminal and make sure clang is installed by typing
 	  
 Linux python file : follow the above instructions for linux but dont use the c compiler
 		    instead when you have cloned the folder cd into it and type
-		    python3 doxxtake.py
+		    python3 Doxxtake.py
