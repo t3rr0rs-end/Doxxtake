@@ -23,7 +23,7 @@ int main(){
     char targetName1_1[50];
     int targetAge;
     char targetEmail[50];
-    char targetPhone[50]
+    char targetPhone[50];
     
     int targetAddress1[50]; // house number
     char targetAddress2[50]; // street
