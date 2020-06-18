@@ -1,5 +1,3 @@
-
-
 // Doxxtake tool by plague
 
 #include <stdio.h>
@@ -24,6 +22,8 @@ int main(){
     char targetName1[50];
     char targetName1_1[50];
     int targetAge;
+    char targetEmail[50];
+    char targetPhone[50]
     
     int targetAddress1[50]; // house number
     char targetAddress2[50]; // street
@@ -33,7 +33,7 @@ int main(){
     char targetAddress4[50]; // state
     
     char targetEmail[50];
-    char targetPhone[50;
+    char targetPhone[50];
 	
 	
 	// inputting the victim information 
