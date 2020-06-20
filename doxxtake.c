@@ -1,3 +1,5 @@
+
+
 // Doxxtake tool by plague
 
 #include <stdio.h>
@@ -16,50 +18,97 @@ int main(){
     printf(" ######   ####  #    # #    #   #   #    # #    # ###### \n");
     printf("---------------------------------------------------------\n");
     
-    
-    // VARIABLES
-    
-    char targetName1[50];
-    char targetName1_1[50];
-    int targetAge;
-    char targetEmail[50];
-    char targetPhone[50];
-    
-    int targetAddress1[50]; // house number
-    char targetAddress2[50]; // street
-    char targetAddress2_1[50]; // second word for address 2
-    char targetAddress3[50]; // town or city
-    int targetZipCode;       // zip code
-    char targetAddress4[50]; // state
-    
-    char targetEmail[50];
-    char targetPhone[50];
+	
+	// file pointer
+	
+	FILE * fpointer = fopen("test_output.txt", "w");
 	
 	
-	// inputting the victim information 
+	// target personal information
 	
-	printf("\nEnter targets's First and Last name : ");
-	scanf("%s %s", targetName1, targetName1_1);
-	printf("\nEnter target's age : ");
-	scanf("%d", &targetAge);
-	printf("Enter target's Phone : ");
-	scanf("%s", targetPhone);
-	printf("\n\nEnter target's Email : ");
-	scanf("%s", targetEmail);
+	char Name1[10];
+	char Name2[20];
+	int Age;
+	char Phone[40];
+	char Email[40];
+
 	
-	printf("\n\nEnter target's house / apartment number : ");
-	scanf("%d", &targetAddress1);
-	printf("\nEnter target's street : ");
-	scanf("%s %s", targetAddress2, targetAddress2_1);
-	printf("\nEnter target's town / city : ");
-	scanf("%s", targetAddress3);
-	printf("\nEnter target's Zip Code : ");
-	scanf("%d", &targetZipCode);
-	printf("\nEnter target's state : ");
-	scanf("%s", targetAddress4);
+	printf("\nEnter target Full Name (e.g John Doe) : ");
+	scanf("%s %s", Name1, Name2);
+	printf("Enter target Age : ");
+	scanf("%d", &Age);
+	printf("Enter target Phone Number eg. (000)-000-000 : ");
+	scanf("%s", Phone);
+	printf("Enter target Email : ");
+	scanf("%s", Email);
 	
+	
+	// target Address
+	
+	int Address1; 
+	char Address2[50];
+	char Address2_1[50];
+	char Address3[50];
+	int Address4;
+	char Address5[50];
+	
+	
+	printf("\nEnter target's house / apartment number : ");
+	scanf("%d", &Address1);
+	printf("Enter target's street (first_name_of_street_here last_name_of_street_here): ");
+	scanf("%s %s", Address2, Address2_1);
+	printf("Enter target's Town / City : ");
+	scanf("%s", Address3);
+	printf("Enter target's Zip Code : ");
+	scanf("%d", &Address4);
+	printf("Enter target's State (Initials_only!) : ");
+	scanf("%s", Address5);
+	
+	
+	// internet information
+	
+	char instagramAccount[30];
+	char snapchatAccount[30];
+	char facebookProfileURL[60];
+	char ip[16];
+	char isp[50];
+	
+	
+	printf("\nEnter target's Instagram Username : ");
+	scanf("%s", instagramAccount);
+	printf("Enter target's Snapchat Username : ");
+	scanf("%s", snapchatAccount);
+	printf("Enter target's facebook profile URL : ");
+	scanf("%s", facebookProfileURL);
+	printf("Enter target's IP : ");
+	scanf("%s", ip);
+	printf("Enter target's ISP : ");
+	scanf("%s", isp);
+	
+	// save target personal info to a file 
+	
+	fprintf(fpointer, "\nFull name : %s %s\n", Name1, Name2);
+	fprintf(fpointer, "Age : %d\n", Age);
+	fprintf(fpointer, "Phone No. : %s\n", Phone);
+	fprintf(fpointer, "Email : %s\n\n", Email);	
+	
+	// save target address info to a file
+	
+	fprintf(fpointer, "House / Apartment No. : %d\n", Address1);
+	fprintf(fpointer, "Street : %s %s\n", Address2, Address2_1);
+	fprintf(fpointer, "Town / City : %s\n", Address3);
+	fprintf(fpointer, "Zip Code : %d\n", Address4);
+	fprintf(fpointer, "State : %s\n", Address5);
+	
+	// save target's online information to a file
+	
+	fprintf(fpointer, "\nInstagram Account : @%s\n", instagramAccount);
+	fprintf(fpointer, "Snapchat Username : %s\n", snapchatAccount);
+	fprintf(fpointer, "Facebook Profile : %s\n", facebookProfileURL);
+	fprintf(fpointer, "IP : %s\n", ip);
+	fprintf(fpointer, "ISP : %s\n", isp);
+	
+	fclose(fpointer);
 	
 	return 0;
 }
-                                                         
-
