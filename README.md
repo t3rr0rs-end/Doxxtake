@@ -21,7 +21,7 @@ Linux :   open a terminal and make sure clang is installed by typing
           apt-get install clang. 
 	  when you have clang installed type apt-get install git.
 	  after this type apt-get install python3
-	  git clone https://github.com//t3rr0rs-end/Doxxtake.git
+	  git clone https://github.com/t3rr0rs-end/Doxxtake.git
 	  after that is done cd into the Doxxtake folder.
 	  To compile the Doxxtake file type gcc doxxtake.c -o doxxtake
 	  When that is 
