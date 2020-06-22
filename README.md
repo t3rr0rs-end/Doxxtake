@@ -32,3 +32,5 @@ Linux python file : follow the above instructions for linux but dont use the c c
 		    python3 Doxxtake.py
 		    
 UPDATE 1: Doxxtake has been updated in the C version. The program now saves the information entered in the Terminal/Command Prompt to a text file and doxxtake now has an online information section so you can enter some known information.
+
+UPDATE 2: Python file updated to save information entered to the console into a text file. C file has been updated to include country.
